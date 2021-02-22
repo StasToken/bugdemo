@@ -19,6 +19,7 @@
     {{ form_row(login_form.email) }}
     <b>Password:</b><br />
     {{ form_row(login_form.password) }}
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
     <div class="text-center"><button type="submit" class="site-btn">Sign in</button></div>
     {{ form_row(login_form._token) }}
     {{ form_end(login_form) }}
